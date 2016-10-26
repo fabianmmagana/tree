@@ -1,0 +1,79 @@
+make --directory=lib ARCH=linux  
+make[1]: Entering directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib'
+make --directory=sparse ARCH=linux
+make[2]: Entering directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/sparse'
+make[2]: Nothing to be done for `default'.
+make[2]: Leaving directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/sparse'
+make --directory=formulc ARCH=linux
+make[2]: Entering directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/formulc'
+make[2]: Nothing to be done for `formulc'.
+make[2]: Leaving directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/formulc'
+make --directory=libkatnet ARCH=linux
+make[2]: Entering directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/libkatnet'
+make[2]: `libkatnet.a' is up to date.
+make[2]: Leaving directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/libkatnet'
+make --directory=libMNet ARCH=linux
+make[2]: Entering directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/libMNet'
+make[2]: `libMNet.a' is up to date.
+make[2]: Leaving directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/libMNet'
+make --directory=KLUsparse ARCH=linux
+make[2]: Entering directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/KLUsparse'
+make --directory=AMD ARCH=linux
+make[3]: Entering directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/KLUsparse/AMD'
+( cd Lib    ; make )
+make[4]: Entering directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/KLUsparse/AMD/Lib'
+make[4]: Nothing to be done for `default'.
+make[4]: Leaving directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/KLUsparse/AMD/Lib'
+make[3]: Leaving directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/KLUsparse/AMD'
+make --directory=BTF ARCH=linux
+make[3]: Entering directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/KLUsparse/BTF'
+( cd Lib ; make )
+make[4]: Entering directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/KLUsparse/BTF/Lib'
+make[4]: Nothing to be done for `default'.
+make[4]: Leaving directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/KLUsparse/BTF/Lib'
+make[3]: Leaving directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/KLUsparse/BTF'
+make --directory=COLAMD ARCH=linux
+make[3]: Entering directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/KLUsparse/COLAMD'
+( cd Lib    ; make ARCH=linux)
+make[4]: Entering directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/KLUsparse/COLAMD/Lib'
+make[4]: Nothing to be done for `default'.
+make[4]: Leaving directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/KLUsparse/COLAMD/Lib'
+make[3]: Leaving directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/KLUsparse/COLAMD'
+make --directory=KLU ARCH=linux
+make[3]: Entering directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/KLUsparse/KLU'
+( cd Lib ; make )
+make[4]: Entering directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/KLUsparse/KLU/Lib'
+make[4]: Nothing to be done for `default'.
+make[4]: Leaving directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/KLUsparse/KLU/Lib'
+make[3]: Leaving directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/KLUsparse/KLU'
+make[2]: Leaving directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/KLUsparse'
+make lib --directory=Cuba-3.0 ARCH=linux
+make[2]: Entering directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/Cuba-3.0'
+make[2]: Nothing to be done for `lib'.
+make[2]: Leaving directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib/Cuba-3.0'
+cp ./Cuba-3.0/cuba.h ../src/
+make[1]: Leaving directory `/mnt/vbshare/lab/software/finesse_src/finesse/lib'
+make --directory=src ARCH=linux kat 
+make[1]: Entering directory `/mnt/vbshare/lab/software/finesse_src/finesse/src'
+gcc -I/usr/include -DHAVE_INLINE -Wall -W -pipe -Wextra -pthread -O3 -ffast-math -fexpensive-optimizations -fomit-frame-pointer -funroll-loops -DNDEBUG -march=native   -c  -I. -I../lib/KLUsparse/KLU/Include/ -I../lib/KLUsparse/AMD/Include/ -I../lib/KLUsparse/COLAMD/Include/ -I../lib/KLUsparse/BTF/Include/ -I../lib/KLUsparse/UFconfig/ kat.c
+gcc -I/usr/include -DHAVE_INLINE -Wall -W -pipe -Wextra -pthread -O3 -ffast-math -fexpensive-optimizations -fomit-frame-pointer -funroll-loops -DNDEBUG -march=native   -c  -I. -I../lib/KLUsparse/KLU/Include/ -I../lib/KLUsparse/AMD/Include/ -I../lib/KLUsparse/COLAMD/Include/ -I../lib/KLUsparse/BTF/Include/ -I../lib/KLUsparse/UFconfig/ kat_aa.c
+gcc -I/usr/include -DHAVE_INLINE -Wall -W -pipe -Wextra -pthread -O3 -ffast-math -fexpensive-optimizations -fomit-frame-pointer -funroll-loops -DNDEBUG -march=native   -c  -I. -I../lib/KLUsparse/KLU/Include/ -I../lib/KLUsparse/AMD/Include/ -I../lib/KLUsparse/COLAMD/Include/ -I../lib/KLUsparse/BTF/Include/ -I../lib/KLUsparse/UFconfig/ kat_aux.c
+gcc -I/usr/include -DHAVE_INLINE -Wall -W -pipe -Wextra -pthread -O3 -ffast-math -fexpensive-optimizations -fomit-frame-pointer -funroll-loops -DNDEBUG -march=native   -c  -I. -I../lib/KLUsparse/KLU/Include/ -I../lib/KLUsparse/AMD/Include/ -I../lib/KLUsparse/COLAMD/Include/ -I../lib/KLUsparse/BTF/Include/ -I../lib/KLUsparse/UFconfig/ kat_calc.c
+gcc -I/usr/include -DHAVE_INLINE -Wall -W -pipe -Wextra -pthread -O3 -ffast-math -fexpensive-optimizations -fomit-frame-pointer -funroll-loops -DNDEBUG -march=native   -c  -I. -I../lib/KLUsparse/KLU/Include/ -I../lib/KLUsparse/AMD/Include/ -I../lib/KLUsparse/COLAMD/Include/ -I../lib/KLUsparse/BTF/Include/ -I../lib/KLUsparse/UFconfig/ kat_check.c
+gcc -I/usr/include -DHAVE_INLINE -Wall -W -pipe -Wextra -pthread -O3 -ffast-math -fexpensive-optimizations -fomit-frame-pointer -funroll-loops -DNDEBUG -march=native   -c  -I. -I../lib/KLUsparse/KLU/Include/ -I../lib/KLUsparse/AMD/Include/ -I../lib/KLUsparse/COLAMD/Include/ -I../lib/KLUsparse/BTF/Include/ -I../lib/KLUsparse/UFconfig/ kat_dump.c
+gcc -I/usr/include -DHAVE_INLINE -Wall -W -pipe -Wextra -pthread -O3 -ffast-math -fexpensive-optimizations -fomit-frame-pointer -funroll-loops -DNDEBUG -march=native   -c  -I. -I../lib/KLUsparse/KLU/Include/ -I../lib/KLUsparse/AMD/Include/ -I../lib/KLUsparse/COLAMD/Include/ -I../lib/KLUsparse/BTF/Include/ -I../lib/KLUsparse/UFconfig/ kat_fortran.c
+gcc -I/usr/include -DHAVE_INLINE -Wall -W -pipe -Wextra -pthread -O3 -ffast-math -fexpensive-optimizations -fomit-frame-pointer -funroll-loops -DNDEBUG -march=native   -c  -I. -I../lib/KLUsparse/KLU/Include/ -I../lib/KLUsparse/AMD/Include/ -I../lib/KLUsparse/COLAMD/Include/ -I../lib/KLUsparse/BTF/Include/ -I../lib/KLUsparse/UFconfig/ kat_server.c
+gcc -I/usr/include -DHAVE_INLINE -Wall -W -pipe -Wextra -pthread -O3 -ffast-math -fexpensive-optimizations -fomit-frame-pointer -funroll-loops -DNDEBUG -march=native   -c  -I. -I../lib/KLUsparse/KLU/Include/ -I../lib/KLUsparse/AMD/Include/ -I../lib/KLUsparse/COLAMD/Include/ -I../lib/KLUsparse/BTF/Include/ -I../lib/KLUsparse/UFconfig/ kat_gnu.c
+gcc -I/usr/include -DHAVE_INLINE -Wall -W -pipe -Wextra -pthread -O3 -ffast-math -fexpensive-optimizations -fomit-frame-pointer -funroll-loops -DNDEBUG -march=native   -c  -I. -I../lib/KLUsparse/KLU/Include/ -I../lib/KLUsparse/AMD/Include/ -I../lib/KLUsparse/COLAMD/Include/ -I../lib/KLUsparse/BTF/Include/ -I../lib/KLUsparse/UFconfig/ kat_init.c
+gcc -I/usr/include -DHAVE_INLINE -Wall -W -pipe -Wextra -pthread -O3 -ffast-math -fexpensive-optimizations -fomit-frame-pointer -funroll-loops -DNDEBUG -march=native   -c  -I. -I../lib/KLUsparse/KLU/Include/ -I../lib/KLUsparse/AMD/Include/ -I../lib/KLUsparse/COLAMD/Include/ -I../lib/KLUsparse/BTF/Include/ -I../lib/KLUsparse/UFconfig/ kat_io.c
+gcc -I/usr/include -DHAVE_INLINE -Wall -W -pipe -Wextra -pthread -O3 -ffast-math -fexpensive-optimizations -fomit-frame-pointer -funroll-loops -DNDEBUG -march=native   -c  -I. -I../lib/KLUsparse/KLU/Include/ -I../lib/KLUsparse/AMD/Include/ -I../lib/KLUsparse/COLAMD/Include/ -I../lib/KLUsparse/BTF/Include/ -I../lib/KLUsparse/UFconfig/ kat_mem.c
+gcc -I/usr/include -DHAVE_INLINE -Wall -W -pipe -Wextra -pthread -O3 -ffast-math -fexpensive-optimizations -fomit-frame-pointer -funroll-loops -DNDEBUG -march=native   -c  -I. -I../lib/KLUsparse/KLU/Include/ -I../lib/KLUsparse/AMD/Include/ -I../lib/KLUsparse/COLAMD/Include/ -I../lib/KLUsparse/BTF/Include/ -I../lib/KLUsparse/UFconfig/ kat_optics.c
+gcc -I/usr/include -DHAVE_INLINE -Wall -W -pipe -Wextra -pthread -O3 -ffast-math -fexpensive-optimizations -fomit-frame-pointer -funroll-loops -DNDEBUG -march=native   -c  -I. -I../lib/KLUsparse/KLU/Include/ -I../lib/KLUsparse/AMD/Include/ -I../lib/KLUsparse/COLAMD/Include/ -I../lib/KLUsparse/BTF/Include/ -I../lib/KLUsparse/UFconfig/ kat_quant.c
+gcc -I/usr/include -DHAVE_INLINE -Wall -W -pipe -Wextra -pthread -O3 -ffast-math -fexpensive-optimizations -fomit-frame-pointer -funroll-loops -DNDEBUG -march=native   -c  -I. -I../lib/KLUsparse/KLU/Include/ -I../lib/KLUsparse/AMD/Include/ -I../lib/KLUsparse/COLAMD/Include/ -I../lib/KLUsparse/BTF/Include/ -I../lib/KLUsparse/UFconfig/ kat_read.c
+gcc -I/usr/include -DHAVE_INLINE -Wall -W -pipe -Wextra -pthread -O3 -ffast-math -fexpensive-optimizations -fomit-frame-pointer -funroll-loops -DNDEBUG -march=native   -c  -I. -I../lib/KLUsparse/KLU/Include/ -I../lib/KLUsparse/AMD/Include/ -I../lib/KLUsparse/COLAMD/Include/ -I../lib/KLUsparse/BTF/Include/ -I../lib/KLUsparse/UFconfig/ kat_spa.c
+gcc -I/usr/include -DHAVE_INLINE -Wall -W -pipe -Wextra -pthread -O3 -ffast-math -fexpensive-optimizations -fomit-frame-pointer -funroll-loops -DNDEBUG -march=native   -c  -I. -I../lib/KLUsparse/KLU/Include/ -I../lib/KLUsparse/AMD/Include/ -I../lib/KLUsparse/COLAMD/Include/ -I../lib/KLUsparse/BTF/Include/ -I../lib/KLUsparse/UFconfig/ kat_klu.c
+gcc -I/usr/include -DHAVE_INLINE -Wall -W -pipe -Wextra -pthread -O3 -ffast-math -fexpensive-optimizations -fomit-frame-pointer -funroll-loops -DNDEBUG -march=native   -c  -I. -I../lib/KLUsparse/KLU/Include/ -I../lib/KLUsparse/AMD/Include/ -I../lib/KLUsparse/COLAMD/Include/ -I../lib/KLUsparse/BTF/Include/ -I../lib/KLUsparse/UFconfig/ dcuhre_all.c
+gcc -I/usr/include -DHAVE_INLINE -Wall -W -pipe -Wextra -pthread -O3 -ffast-math -fexpensive-optimizations -fomit-frame-pointer -funroll-loops -DNDEBUG -march=native   -c  -I. -I../lib/KLUsparse/KLU/Include/ -I../lib/KLUsparse/AMD/Include/ -I../lib/KLUsparse/COLAMD/Include/ -I../lib/KLUsparse/BTF/Include/ -I../lib/KLUsparse/UFconfig/ md5.c
+gcc -I/usr/include -DHAVE_INLINE -Wall -W -pipe -Wextra -pthread -O3 -ffast-math -fexpensive-optimizations -fomit-frame-pointer -funroll-loops -DNDEBUG -march=native   -c  -I. -I../lib/KLUsparse/KLU/Include/ -I../lib/KLUsparse/AMD/Include/ -I../lib/KLUsparse/COLAMD/Include/ -I../lib/KLUsparse/BTF/Include/ -I../lib/KLUsparse/UFconfig/ base64.c
+gcc  -Wall -W -pipe -Wextra -pthread -O3 -ffast-math -fexpensive-optimizations -fomit-frame-pointer -funroll-loops -DNDEBUG -march=native   -I/usr/include -DHAVE_INLINE -o ../kat kat.o kat_aa.o kat_aux.o kat_calc.o kat_check.o kat_dump.o kat_fortran.o kat_server.o kat_gnu.o kat_init.o kat_io.o kat_mem.o kat_optics.o kat_quant.o kat_read.o kat_spa.o kat_klu.o dcuhre_all.o md5.o base64.o ../lib/formulc/formulc.o ../lib/formulc/random.o ../lib/sparse/sparse.a  ../lib/KLUsparse/KLU/Lib/libklu.a ../lib/KLUsparse/BTF/Lib/libbtf.a ../lib/KLUsparse/COLAMD/Lib/libcolamd.a  ../lib/KLUsparse/AMD/Lib/libamd.a  ../lib/libkatnet/libkatnet.a ../lib/libMNet/libMNet.a  -lm gsl/libgslcblas.a gsl/libgsl.a -L../lib/Cuba-3.0 -lcuba
+make[1]: Leaving directory `/mnt/vbshare/lab/software/finesse_src/finesse/src'
